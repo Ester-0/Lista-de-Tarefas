@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoList - crie tarefas</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,&display=swap" rel="stylesheet">
+
+    <script type="text/javascript" src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <aside class="side-bar">       
+        <img src="https://img.freepik.com/icones-gratis/do-utilizador_318-219674.jpg">
+        <h1>Ester Arruda</h1>
+        <p>
+            Template de uma lista de tarefas com layout dinâmico desenvolvido com as tecnologias abaixo.
+        </p>
+        <nav>
+            <ul>
+                <li class="li-aside">
+                    <a class="anchor-aside" href="https://developer.mozilla.org/pt-BR/docs/Web/HTML" target="_blank">HTML5</a>
+                </li>
+                <li class="li-aside">
+                    <a class="anchor-aside" href="https://developer.mozilla.org/pt-BR/docs/Web/CSS" target="_blank">CSS3</a>
+                </li>
+                <li class="li-aside">
+                    <a class="anchor-aside" href="https://developer.mozilla.org/pt-BR/docs/Web/JavaScript" target="_blank">JavaScript</a>
+                </li>
+                <li class="li-aside">
+                    <a class="anchor-aside" href="https://fontawesome.com/icons" target="_blank">FontAwesome</a>
+                </li>
+            </ul>
+        </nav>
+    </aside>
+    <main class="container">
+        <article class="article-main"> 
+            <div class="tittle-main">
+              <h2>Lista de Tarefas</h2>             
+            </div>
+            <div class="d-flex">
+                <div>
+                    <input type="button" onclick="addTask()" class="btn" value="Adicionar Tarefa">
+                </div>
+                <div>
+                    <input class="input-task" type="text" id="input-write-task" placeholder="Adicione sua tarefa...">
+                    <button class="btn-save-task" type="button" onclick="saveTask('task-day')">
+                        <i class="fa-solid fa-sun fa-lg" alt="botão para salvar tarefas do dia"></i>
+                    </button>
+                    <button class="btn-save-task" type="button" onclick="saveTask('task-night')">
+                        <i class="fa-solid fa-moon fa-lg" alt="botão para salvar tarefas da noite"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="section-container">
+                <section class="section-task">
+                    <div class="tittle-section">
+                        <h2>DIA</h2>
+                    </div>
+                    <div>
+                        <ul id="task-day"></ul>
+                    </div>
+                </section>
+                <section class="section-task">
+                    <div class="tittle-section">
+                        <h2>NOITE</h2>
+                    </div>
+                    <div>
+                        <ul id="task-night"></ul>
+                    </div>
+                </section>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
